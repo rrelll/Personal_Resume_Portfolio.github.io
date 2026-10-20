@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#252A33">
+    <meta name="description" content="Darryl's Network Computing and technology portfolio">
+
+    <title>Darryl | Technology Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <a href="#home" class="skip-link">Skip to content</a>
+    <div class="scroll-progress"></div>
+
+    <!-- NAVIGATION -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+
+            <a href="#home" class="logo">darryl<span>.</span></a>
+
+            <button
+                class="menu-toggle"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="nav-links">
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a class="nav-link active" href="#home">Home</a></li>
+                <li><a class="nav-link" href="#about">About</a></li>
+                <li><a class="nav-link" href="#projects">Projects</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
+                <li><a class="nav-cta" href="#contact">Let's talk ↗</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero container" id="home">
+
+            <div class="hero-content">
+
+                <div class="availability-badge">
+                    <span class="availability-dot"></span>
+
+                    <div class="availability-content">
+                        <span class="availability-label">OPEN TO INTERNSHIP</span>
+                        <span class="availability-date">February – July 2027</span>
+                    </div>
+
+                    <span class="availability-arrow">↗</span>
+                </div>
+
+                <p class="eyebrow">
+                    HEY, I'M DARRYL — JUST A TECH NERD 🤓
+                </p>
+
+                <h1>
+                    Curious mind.<br>
+                    Technology <span>enthusiast.</span>
+                </h1>
+
+                <p class="hero-description">
+                    I'm a third-year Network Computing student at UNIMAS
+                    with a Diploma in Electronic Engineering (Communication).
+                    Passionate about technology, I enjoy exploring how things
+                    work, learning new skills, and expressing my creativity
+                    through photography and visual storytelling.
+                </p>
+
+                <div class="role-line">
+                    <span class="role-label">CURRENT INTERESTS</span>
+                    <span id="role-text">Computer Networking</span>
+                    <span class="typing-cursor"></span>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="button button-primary">
+                        Explore my work ↗
+                    </a>
+
+                    <a href="#contact" class="button button-secondary">
+                        Get in touch →
+                    </a>
+                </div>
+
+                <div class="hero-note">
+                    <span class="note-line"></span>
+                    <span>Always curious. Always learning. Always building.</span>
+                </div>
+
+            </div>
+
+            <!-- PROFILE PHOTO -->
+            <div class="hero-visual">
+
+                <div class="visual-index">
+                    <span>PROFILE / 001</span>
+                    <span>UNIMAS · MALAYSIA</span>
+                </div>
+
+                <div class="portrait-frame">
+
+                    <div class="photo-placeholder" id="photo-placeholder">
+                        <span class="placeholder-initials">D.</span>
+                        <span class="placeholder-caption">YOUR PHOTO GOES HERE</span>
+                    </div>
+
+                    <img
+                        class="profile-image"
+                        id="profile-image"
+                        src="images/profile.jpg"
+                        alt="Portrait of Darryl"
+                        hidden
+                    >
+
+                    <div class="portrait-grid"></div>
+
+                    <div class="portrait-label">
+                        <span class="label-marker"></span>
+
+                        <div>
+                            <strong>DARRYL</strong>
+                            <small>NETWORK COMPUTING STUDENT</small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="floating-tag tag-top">
+                    ⌘ TECH ENTHUSIAST
+                </div>
+
+                <div class="floating-tag tag-bottom">
+                    ✳ LEARN · BUILD · EXPLORE
+                </div>
+
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+
+                <span class="spark spark-one">✳</span>
+
+            </div>
+
+        </section>
+
+        <!-- MOVING INTERESTS TICKER -->
+        <section class="ticker" aria-label="Areas of interest">
+
+            <div class="ticker-track">
+
+                <span>COMPUTER NETWORKING <i>✳</i></span>
+                <span>IT SYSTEMS <i>✳</i></span>
+                <span>INTERNET OF THINGS <i>✳</i></span>
+                <span>TECHNICAL PROBLEM SOLVING <i>✳</i></span>
+                <span>PHOTOGRAPHY <i>✳</i></span>
+
+                <span>COMPUTER NETWORKING <i>✳</i></span>
+                <span>IT SYSTEMS <i>✳</i></span>
+                <span>INTERNET OF THINGS <i>✳</i></span>
+                <span>TECHNICAL PROBLEM SOLVING <i>✳</i></span>
+                <span>PHOTOGRAPHY <i>✳</i></span>
+
+            </div>
+
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="content-section container" id="about">
+
+            <p class="eyebrow">01 / A LITTLE ABOUT ME</p>
+
+            <h2>
+                Interested in how things work.
+                <span>Curious about what's next.</span>
+            </h2>
+
+            <p>
+                My background combines Network Computing and Electronic
+                Engineering (Communication), with an interest in how
+                technology solves real-world problems. Outside of computing,
+                I enjoy photography, exploring composition, lighting,
+                and visual storytelling.
+            </p>
+
+            <p>
+                I'm looking forward to applying what I've learned,
+                developing hands-on technical skills, and learning
+                from professionals in a real-world environment.
+            </p>
+
+            <div class="skills-list">
+                <span>Computer Networking</span>
+                <span>IT Systems</span>
+                <span>Technical Support</span>
+                <span>IoT Technologies</span>
+                <span>Problem Solving</span>
+                <span>Photography</span>
+            </div>
+
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section
+            class="content-section projects-section container"
+            id="projects">
+
+            <p class="eyebrow">02 / THINGS I'VE WORKED ON</p>
+
+            <h2>Learning by <span>doing.</span></h2>
+
+            <p>
+                A collection of academic work, technical exercises,
+                and personal projects that combine my interests in
+                technology, problem-solving, and creativity.
+            </p>
+
+            <!-- PROJECT 01: PHOTOGRAPHY PORTFOLIO -->
+            <article class="project-preview">
+
+                <span class="project-number">01</span>
+
+                <div class="project-info">
+
+                    <p class="project-category">
+                        WEB DEVELOPMENT / PHOTOGRAPHY
+                    </p>
+
+                    <h3>Photography Portfolio Website</h3>
+
+                    <p>
+                        A personal photography website showcasing my work
+                        through a clean, responsive design, with a focus
+                        on composition, lighting, and visual storytelling.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <!-- PROJECT LINKS -->
+                    <div class="project-links">
+
+                        <a
+                            class="project-link"
+                            href="https://rrelll.github.io/ylll-d-photography/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            View Live Website <span>↗</span>
+                        </a>
+
+                        <a
+                            class="project-link project-link-secondary"
+                            href="https://github.com/rrelll/ylll-d-photography"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            View Source Code <span>↗</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <span class="project-arrow">↗</span>
+
+            </article>
+
+            <!-- PROJECT 02 -->
+            <article class="project-preview">
+
+                <span class="project-number">02</span>
+
+                <div class="project-info">
+
+                    <p class="project-category">NETWORKING / SYSTEMS</p>
+
+                    <h3>Your Project Title</h3>
+
+                    <p>
+                        Replace this section with a genuine networking
+                        project, lab exercise, or academic assignment.
+                        Describe the problem, tools used, and what you learned.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Networking</span>
+                        <span>Replace with tools</span>
+                    </div>
+
+                </div>
+
+                <span class="project-arrow">↗</span>
+
+            </article>
+
+            <!-- PROJECT 03 -->
+            <article class="project-preview">
+
+                <span class="project-number">03</span>
+
+                <div class="project-info">
+
+                    <p class="project-category">SOFTWARE / TECHNICAL</p>
+
+                    <h3>Another Project</h3>
+
+                    <p>
+                        Showcase another genuine project, programming
+                        assignment, virtual machine lab, or personal
+                        technical experiment.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Replace with skill</span>
+                        <span>Replace with tools</span>
+                    </div>
+
+                </div>
+
+                <span class="project-arrow">↗</span>
+
+            </article>
+
+            <p class="project-note">
+                More projects will be added as I continue learning and building.
+            </p>
+
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section
+            class="content-section contact-section container"
+            id="contact">
+
+            <p class="eyebrow">03 / LET'S CONNECT</p>
+
+            <h2>
+                Have an opportunity?
+                <span>Let's talk.</span>
+            </h2>
+
+            <p>
+                I'm looking forward to connecting with people in the
+                technology industry and exploring internship opportunities
+                where I can learn, contribute, and grow.
+            </p>
+
+            
+<div class="contact-actions">
+
+    <a
+        class="button contact-button contact-email"
+        href="mailto:your.email@example.com">
+        <span class="contact-icon">✉</span>
+        <span>Email Me</span>
+        <span class="contact-arrow">↗</span>
+    </a>
+
+    <a
+        class="button contact-button contact-linkedin"
+        href="https://www.linkedin.com/in/YOUR-USERNAME/"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="contact-icon">in</span>
+        <span>Connect on LinkedIn</span>
+        <span class="contact-arrow">↗</span>
+    </a>
+
+    <a
+        class="button contact-button contact-github"
+        href="https://github.com/YOUR-USERNAME"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="contact-icon">⌘</span>
+        <span>Explore GitHub</span>
+        <span class="contact-arrow">↗</span>
+    </a>
+
+</div>
+
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer container">
+
+        <a class="footer-logo" href="#home">
+            darryl<span>.</span>
+        </a>
+
+        <p>Designed and built with curiosity.</p>
+
+        <p>
+            © <span id="current-year"></span> Darryl
+        </p>
+
+    </footer>
+
+</body>
+</html>
