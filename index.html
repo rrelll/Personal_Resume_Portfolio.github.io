@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,79 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#252A33">
     <meta name="description" content="Darryl's Network Computing and technology portfolio">
-
     <title>Darryl | Technology Portfolio</title>
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-
-    <!-- JavaScript -->
     <script src="script.js" defer></script>
 </head>
-
 <body>
+    <div class="boot-screen" id="boot-screen" aria-label="Loading portfolio">
+        <div class="boot-terminal">
+            <div class="boot-label">SYSTEM BOOT <span>v1.0</span></div>
+            <div class="boot-lines" aria-live="polite">
+                <p>INITIALIZING PORTFOLIO<span class="boot-dots">...</span></p>
+                <p>LOADING PROFILE <span class="boot-check">OK</span></p>
+                <p>SYSTEM STATUS <span class="boot-check">ONLINE</span></p>
+            </div>
+            <div class="boot-progress">
+                <div class="boot-progress-bar"></div>
+            </div>
+            <div class="boot-footer">
+                <span>darryl.</span>
+                <span>WELCOME</span>
+            </div>
+        </div>
+    </div>
 
     <a href="#home" class="skip-link">Skip to content</a>
-    <div class="scroll-progress"></div>
+    <div class="scroll-progress" aria-hidden="true"></div>
 
-    <!-- NAVIGATION -->
     <header class="site-header">
         <nav class="navbar container" aria-label="Main navigation">
-
             <a href="#home" class="logo">darryl<span>.</span></a>
-
-            <button
-                class="menu-toggle"
-                aria-label="Open menu"
-                aria-expanded="false"
-                aria-controls="nav-links">
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
                 <span></span>
                 <span></span>
             </button>
-
             <ul class="nav-links" id="nav-links">
                 <li><a class="nav-link active" href="#home">Home</a></li>
                 <li><a class="nav-link" href="#about">About</a></li>
+                <li><a class="nav-link" href="#experience">Journey</a></li>
+                <li><a class="nav-link" href="#skills">Skills</a></li>
                 <li><a class="nav-link" href="#projects">Projects</a></li>
-                <li><a class="nav-link" href="#contact">Contact</a></li>
                 <li><a class="nav-cta" href="#contact">Let's talk ↗</a></li>
             </ul>
-
         </nav>
     </header>
 
     <main>
-
-        <!-- HERO SECTION -->
         <section class="hero container" id="home">
-
             <div class="hero-content">
-
                 <div class="availability-badge">
                     <span class="availability-dot"></span>
-
                     <div class="availability-content">
                         <span class="availability-label">OPEN TO INTERNSHIP</span>
                         <span class="availability-date">February – July 2027</span>
                     </div>
-
                     <span class="availability-arrow">↗</span>
                 </div>
 
-                <p class="eyebrow">
-                    HEY, I'M DARRYL — JUST A TECH NERD 🤓
-                </p>
-
-                <h1>
-                    Curious mind.<br>
-                    Technology <span>enthusiast.</span>
-                </h1>
-
+                <p class="eyebrow">HEY, I'M DARRYL — JUST A TECH NERD</p>
+                <h1>Curious mind.<br>Technology <span>enthusiast.</span></h1>
                 <p class="hero-description">
                     I'm a third-year Network Computing student at UNIMAS
                     with a Diploma in Electronic Engineering (Communication).
@@ -94,105 +81,70 @@
                 </div>
 
                 <div class="hero-actions">
-                    <a href="#projects" class="button button-primary">
-                        Explore my work ↗
-                    </a>
-
-                    <a href="#contact" class="button button-secondary">
-                        Get in touch →
-                    </a>
+                    <a href="#projects" class="button button-primary">Explore my work ↗</a>
+                    <a href="#contact" class="button button-secondary">Get in touch →</a>
                 </div>
 
                 <div class="hero-note">
                     <span class="note-line"></span>
                     <span>Always curious. Always learning. Always building.</span>
                 </div>
-
             </div>
 
-            <!-- PROFILE PHOTO -->
             <div class="hero-visual">
-
                 <div class="visual-index">
                     <span>PROFILE / 001</span>
                     <span>UNIMAS · MALAYSIA</span>
                 </div>
 
                 <div class="portrait-frame">
-
                     <div class="photo-placeholder" id="photo-placeholder">
                         <span class="placeholder-initials">D.</span>
                         <span class="placeholder-caption">YOUR PHOTO GOES HERE</span>
                     </div>
-
-                    <img
-                        class="profile-image"
-                        id="profile-image"
-                        src="profile.jpg"
-                        alt="Portrait of Darryl"
-                        hidden
-                    >
-
+                    <img class="profile-image" id="profile-image" src="profile.jpg" alt="Portrait of Darryl" hidden>
                     <div class="portrait-grid"></div>
-
                     <div class="portrait-label">
                         <span class="label-marker"></span>
-
                         <div>
                             <strong>DARRYL</strong>
                             <small>NETWORK COMPUTING STUDENT</small>
                         </div>
                     </div>
-
                 </div>
 
-                <div class="floating-tag tag-top">
-                    ⌘ TECH ENTHUSIAST
-                </div>
-
-                <div class="floating-tag tag-bottom">
-                    ✳ LEARN · BUILD · EXPLORE
-                </div>
-
+                <div class="floating-tag tag-top">⌘ TECH ENTHUSIAST</div>
+                <div class="floating-tag tag-bottom">✳ LEARN · BUILD · EXPLORE</div>
                 <div class="orbit orbit-one"></div>
                 <div class="orbit orbit-two"></div>
-
                 <span class="spark spark-one">✳</span>
-
             </div>
-
         </section>
 
-        <!-- MOVING INTERESTS TICKER -->
         <section class="ticker" aria-label="Areas of interest">
-
             <div class="ticker-track">
-
                 <span>COMPUTER NETWORKING <i>✳</i></span>
                 <span>IT SYSTEMS <i>✳</i></span>
                 <span>INTERNET OF THINGS <i>✳</i></span>
+                <span>ELECTRICAL & ELECTRONICS <i>✳</i></span>
                 <span>TECHNICAL PROBLEM SOLVING <i>✳</i></span>
                 <span>PHOTOGRAPHY <i>✳</i></span>
-
                 <span>COMPUTER NETWORKING <i>✳</i></span>
                 <span>IT SYSTEMS <i>✳</i></span>
                 <span>INTERNET OF THINGS <i>✳</i></span>
+                <span>ELECTRICAL & ELECTRONICS <i>✳</i></span>
                 <span>TECHNICAL PROBLEM SOLVING <i>✳</i></span>
                 <span>PHOTOGRAPHY <i>✳</i></span>
-
             </div>
-
         </section>
 
-        <!-- ABOUT SECTION -->
         <section class="content-section container" id="about">
-
-            <p class="eyebrow">01 / A LITTLE ABOUT ME</p>
-
-            <h2>
-                Interested in how things work.
-                <span>Curious about what's next.</span>
-            </h2>
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">01 / A LITTLE ABOUT ME</p>
+                    <h2>Interested in how things work. <span>Curious about what's next.</span></h2>
+                </div>
+            </div>
 
             <p>
                 My background combines Network Computing and Electronic
@@ -213,211 +165,376 @@
                 <span>IT Systems</span>
                 <span>Technical Support</span>
                 <span>IoT Technologies</span>
+                <span>Electrical & Electronics</span>
                 <span>Problem Solving</span>
                 <span>Photography</span>
             </div>
-
         </section>
 
-        <!-- PROJECTS SECTION -->
-        <section
-            class="content-section projects-section container"
-            id="projects">
+        <section class="content-section journey-section" id="experience">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">02 / MY JOURNEY</p>
+                        <h2>Learning, growing<br>and <span>moving forward.</span></h2>
+                    </div>
+                    <p class="section-description">
+                        My academic background and early exposure
+                        to the professional working environment.
+                    </p>
+                </div>
 
-            <p class="eyebrow">02 / THINGS I'VE WORKED ON</p>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">SEP 2024 — JUN 2028</div>
+                        <div class="timeline-card">
+                            <span class="timeline-index">01 / EDUCATION</span>
+                            <h3>Bachelor of Computer Science (Honours) in Network Computing</h3>
+                            <p class="timeline-organisation">Universiti Malaysia Sarawak (UNIMAS)</p>
+                            <p>
+                                Currently pursuing a degree focused on
+                                computing, networking, systems and
+                                related technical disciplines.
+                            </p>
+                            <div class="timeline-tags">
+                                <span>Network Computing</span>
+                                <span>Computer Science</span>
+                            </div>
+                            <span class="timeline-status">CURRENTLY PURSUING</span>
+                        </div>
+                    </article>
 
-            <h2>Learning by <span>doing.</span></h2>
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">OCT 2021 — JUN 2024</div>
+                        <div class="timeline-card">
+                            <span class="timeline-index">02 / EDUCATION</span>
+                            <h3>Diploma in Electronic Engineering (Communication)</h3>
+                            <p class="timeline-organisation">Politeknik Kuching Sarawak</p>
+                            <p>
+                                Developed a foundation in electronic
+                                engineering and communication-related
+                                technical subjects.
+                            </p>
+                            <div class="timeline-tags">
+                                <span>Electronic Engineering</span>
+                                <span>Communication</span>
+                            </div>
+                            <span class="timeline-result">CGPA 3.73</span>
+                        </div>
+                    </article>
 
-            <p>
-                A collection of academic work, technical exercises,
-                and personal projects that combine my interests in
-                technology, problem-solving, and creativity.
-            </p>
+                    <article class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-date">JAN — JUN 2024</div>
+                        <div class="timeline-card">
+                            <span class="timeline-index">03 / EXPERIENCE</span>
+                            <h3>Industrial Trainee</h3>
+                            <p class="timeline-organisation">Sarawak Energy Berhad</p>
+                            <p>
+                                Gained exposure to field operations,
+                                electrical infrastructure, meter inspections,
+                                installation-related activities and customer
+                                service through site visits and supervised work.
+                            </p>
+                            <div class="timeline-tags">
+                                <span>Field Exposure</span>
+                                <span>Technical Operations</span>
+                                <span>Customer Service</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-            <!-- PROJECT 01: PHOTOGRAPHY PORTFOLIO -->
+        <section class="content-section skills-section" id="skills">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">03 / TECHNICAL TOOLKIT</p>
+                        <h2>Skills I've learned.<br><span>Tools I explore.</span></h2>
+                    </div>
+                    <p class="section-description">
+                        A snapshot of the technologies and tools
+                        I've encountered through coursework,
+                        projects and practical exercises.
+                    </p>
+                </div>
+
+                <div class="skill-groups">
+                    <article class="skill-group">
+                        <div class="skill-group-top">
+                            <span class="skill-group-number">01</span>
+                            <span class="skill-group-symbol">⌘</span>
+                        </div>
+                        <h3>Networking</h3>
+                        <p>Basic knowledge of network configuration and troubleshooting using Cisco Packet Tracer.</p>
+                        <div class="skill-tags">
+                            <span>Cisco Packet Tracer</span>
+                            <span>Network Configuration</span>
+                            <span>IP Addressing</span>
+                            <span>VLANs</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-group">
+                        <div class="skill-group-top">
+                            <span class="skill-group-number">02</span>
+                            <span class="skill-group-symbol">{ }</span>
+                        </div>
+                        <h3>Programming</h3>
+                        <p>Programming fundamentals and application development through coursework.</p>
+                        <div class="skill-tags">
+                            <span>Java</span>
+                            <span>C</span>
+                            <span>C++</span>
+                            <span>Python</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>SQL / MySQL</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-group">
+                        <div class="skill-group-top">
+                            <span class="skill-group-number">03</span>
+                            <span class="skill-group-symbol">⌁</span>
+                        </div>
+                        <h3>IoT & Embedded Systems</h3>
+                        <p>Microcontrollers, sensor-based projects and connected monitoring systems.</p>
+                        <div class="skill-tags">
+                            <span>NodeMCU ESP8266</span>
+                            <span>Arduino</span>
+                            <span>Sensors</span>
+                            <span>ThingSpeak</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-group">
+                        <div class="skill-group-top">
+                            <span class="skill-group-number">04</span>
+                            <span class="skill-group-symbol">▧</span>
+                        </div>
+                        <h3>Tools & Creative</h3>
+                        <p>Tools used for development, productivity and visual content creation.</p>
+                        <div class="skill-tags">
+                            <span>VS Code</span>
+                            <span>XAMPP</span>
+                            <span>GitHub</span>
+                            <span>Microsoft Office</span>
+                            <span>Canva</span>
+                            <span>CapCut</span>
+                            <span>Lightroom</span>
+                            <span>Photoshop Basics</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-group">
+                        <div class="skill-group-top">
+                            <span class="skill-group-number">05</span>
+                            <span class="skill-group-symbol">⌁</span>
+                        </div>
+                        <h3>Electrical & Power Distribution</h3>
+                        <p>Practical exposure to electrical substations, transformers, RMUs, street lighting, and electricity meter inspection.</p>
+                        <div class="skill-tags">
+                            <span>Substations</span>
+                            <span>Transformers & RMUs</span>
+                            <span>Street Lighting</span>
+                            <span>Meter Inspection</span>
+                            <span>Meter Installation</span>
+                            <span>Meter Replacement</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section projects-section container" id="projects">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">04 / THINGS I'VE WORKED ON</p>
+                    <h2>Learning by <span>doing.</span></h2>
+                </div>
+                <p class="section-description">
+                    Academic projects and personal work that reflect
+                    my interests in technology, problem-solving and creativity.
+                </p>
+            </div>
+
             <article class="project-preview">
-
-                <span class="project-number">01</span>
-
                 <div class="project-info">
-
-                    <p class="project-category">
-                        WEB DEVELOPMENT / PHOTOGRAPHY
-                    </p>
-
-                    <h3>Photography Portfolio Website</h3>
-
+                    <p class="project-category">01 — WEB DEVELOPMENT</p>
+                    <h3>Photography Portfolio</h3>
                     <p>
-                        A personal photography website showcasing my work
-                        through a clean, responsive design, with a focus
-                        on composition, lighting, and visual storytelling.
+                        A responsive photography website showcasing my work
+                        through clean layouts, composition and visual storytelling.
                     </p>
-
                     <div class="project-tags">
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>JavaScript</span>
                     </div>
-
-                    <!-- PROJECT LINKS -->
                     <div class="project-links">
-
-                        <a
-                            class="project-link"
-                            href="https://rrelll.github.io/ylll-d-photography/"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            View Live Website <span>↗</span>
-                        </a>
-
-                        <a
-                            class="project-link project-link-secondary"
-                            href="https://github.com/rrelll/ylll-d-photography"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            View Source Code <span>↗</span>
-                        </a>
-
+                        <a href="https://rrelll.github.io/ylll-d-photography/" target="_blank" rel="noopener noreferrer" class="project-link">Live Website <span>↗</span></a>
+                        <a href="https://github.com/rrelll/ylll-d-photography" target="_blank" rel="noopener noreferrer" class="project-link">Source Code <span>↗</span></a>
                     </div>
-
                 </div>
-
-                <span class="project-arrow">↗</span>
-
+                <div class="project-image">
+                    <img src="images/project-portfolio1.jpg" alt="Photography portfolio website preview" loading="lazy" class="clickable-photo">
+                </div>
             </article>
 
-            <!-- PROJECT 02 -->
             <article class="project-preview">
-
-                <span class="project-number">02</span>
-
                 <div class="project-info">
-
-                    <p class="project-category">NETWORKING / SYSTEMS</p>
-
-                    <h3>Your Project Title</h3>
-
+                    <p class="project-category">02 — LEARNING APPLICATION</p>
+                    <h3>Energy Hero: Sustainable Energy Learning App</h3>
                     <p>
-                        Replace this section with a genuine networking
-                        project, lab exercise, or academic assignment.
-                        Describe the problem, tools used, and what you learned.
+                        A learning application focused on sustainable development,
+                        designed to promote awareness of Sustainable Development
+                        Goal 7: Affordable and Clean Energy through educational content.
                     </p>
-
+                    <p class="project-note">
+                        <span>Group project by Darryl, Jayden, Aeman and Marcella.</span>
+                    </p>
                     <div class="project-tags">
-                        <span>Networking</span>
-                        <span>Replace with tools</span>
+                        <span>Java</span>
+                        <span>Object-Oriented Programming</span>
                     </div>
-
+                    <a class="project-link project-link-secondary" href="https://github.com/rrelll/Energy-Hero-Sustainable-Energy-Learning-App" target="_blank" rel="noopener noreferrer">Source Code ↗</a>
                 </div>
-
-                <span class="project-arrow">↗</span>
-
+                <div class="project-image project-collage">
+                    <img src="images/project2-1.png" alt="Energy Hero main screen" class="clickable-photo" loading="lazy">
+                    <img src="images/project2-2.png" alt="Energy Hero quiz screen" class="clickable-photo" loading="lazy">
+                    <img src="images/project2-3.png" alt="Energy Hero leaderboard" class="clickable-photo" loading="lazy">
+                    <img src="images/project2-4.png" alt="Energy Hero additional screen" class="clickable-photo" loading="lazy">
+                </div>
             </article>
 
-            <!-- PROJECT 03 -->
             <article class="project-preview">
-
-                <span class="project-number">03</span>
-
                 <div class="project-info">
-
-                    <p class="project-category">SOFTWARE / TECHNICAL</p>
-
-                    <h3>Another Project</h3>
-
+                    <p class="project-category">03 — MANAGEMENT SYSTEM</p>
+                    <h3>DirectFarm Management System</h3>
                     <p>
-                        Showcase another genuine project, programming
-                        assignment, virtual machine lab, or personal
-                        technical experiment.
+                        Developed a Python-based farm management system using
+                        object-oriented programming to support farmers, buyers,
+                        drivers, coordinators and officers. Features include
+                        product management, order processing, delivery tracking,
+                        payment reports and carbon emission reporting.
                     </p>
-
+                    <p class="project-note">
+                        <span>Group project by Darryl, Theban, Eileen, Salwen and Syafrul.</span>
+                    </p>
                     <div class="project-tags">
-                        <span>Replace with skill</span>
-                        <span>Replace with tools</span>
+                        <span>Python</span>
+                        <span>Object-Oriented Programming</span>
+                        <span>System Design</span>
                     </div>
-
+                    <a class="project-link project-link-secondary" href="https://github.com/rrelll/DailyFarm-System" target="_blank" rel="noopener noreferrer">Source Code ↗</a>
                 </div>
-
-                <span class="project-arrow">↗</span>
-
+                <div class="project-image project-collage project3-collage">
+                    <img src="images/project3-1.png" alt="DirectFarm main screen" class="clickable-photo" loading="lazy">
+                    <img src="images/project3-2.png" alt="DirectFarm add user screen" class="clickable-photo" loading="lazy">
+                </div>
             </article>
 
-            <p class="project-note">
-                More projects will be added as I continue learning and building.
-            </p>
+            <article class="project-preview">
+                <div class="project-info">
+                    <p class="project-category">04 — HCI / UI UX</p>
+                    <h3>EV Dashboard Interface</h3>
+                    <p>
+                        Designed an electric vehicle dashboard interface for a
+                        Human-Computer Interaction project, emphasizing intuitive
+                        navigation, clear data visualization and user-centered design.
+                    </p>
+                    <p class="project-note">
+                        <span>Group project by Darryl, Jayden, Aeman, Haziq, Nafis, Wan, Aiman, Irman, Syakirul and Izz.</span>
+                    </p>
+                    <div class="project-tags">
+                        <span>Human-Computer Interaction</span>
+                        <span>UI/UX Design</span>
+                    </div>
+                    <div class="project-links">
+                        <a class="project-link project-link-secondary" href="https://www.canva.com/design/DAHLEapBO78/haW2WrvGqW7PaXQ1g_ZA7w/edit" target="_blank" rel="noopener noreferrer">View Project ↗</a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="images/project4-1.png" alt="EV dashboard interface preview" class="clickable-photo" loading="lazy">
+                </div>
+            </article>
 
+            <article class="project-preview">
+                <div class="project-info">
+                    <p class="project-category">05 — IoT / EMBEDDED SYSTEMS</p>
+                    <h3>Fish Aquarium Temperature Monitoring & Control</h3>
+                    <p>
+                        Developed an IoT-based Betta fish aquarium monitoring
+                        system using NodeMCU ESP8266 and ThingSpeak, with
+                        automatic fan and LED activation when temperatures
+                        exceed 28°C.
+                    </p>
+                    <p class="project-note">
+                        <span>Final Year Project Politeknik</span>
+                    </p>
+                    <div class="project-tags">
+                        <span>NodeMCU ESP8266</span>
+                        <span>C++</span>
+                        <span>ThingSpeak</span>
+                        <span>Temperature Sensor</span>
+                        <span>Automation</span>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="images/project5-1.png" alt="Fish aquarium temperature monitoring project" class="clickable-photo" loading="lazy">
+                </div>
+            </article>
         </section>
 
-        <!-- CONTACT SECTION -->
-        <section
-            class="content-section contact-section container"
-            id="contact">
-
-            <p class="eyebrow">03 / LET'S CONNECT</p>
-
-            <h2>
-                Have an opportunity?
-                <span>Let's talk.</span>
-            </h2>
-
-            <p>
-                I'm looking forward to connecting with people in the
-                technology industry and exploring internship opportunities
-                where I can learn, contribute, and grow.
-            </p>
-
-            
-<div class="contact-actions">
-
-    <a
-        class="button contact-button contact-email"
-        href="mailto:your.email@example.com">
-        <span class="contact-icon">✉</span>
-        <span>Email Me</span>
-        <span class="contact-arrow">↗</span>
-    </a>
-
-    <a
-        class="button contact-button contact-linkedin"
-        href="https://www.linkedin.com/in/YOUR-USERNAME/"
-        target="_blank"
-        rel="noopener noreferrer">
-        <span class="contact-icon">in</span>
-        <span>Connect on LinkedIn</span>
-        <span class="contact-arrow">↗</span>
-    </a>
-
-    <a
-        class="button contact-button contact-github"
-        href="https://github.com/YOUR-USERNAME"
-        target="_blank"
-        rel="noopener noreferrer">
-        <span class="contact-icon">⌘</span>
-        <span>Explore GitHub</span>
-        <span class="contact-arrow">↗</span>
-    </a>
-
-</div>
-
-
+        <section class="signature-section" id="contact">
+            <div class="signature-bg-word" aria-hidden="true">BUILD</div>
+            <div class="container signature-inner">
+                <p class="eyebrow">05 / THE NEXT CONNECTION</p>
+                <p class="signature-pretitle">HAVE AN OPPORTUNITY IN MIND?</p>
+                <h2>LET'S<br>CONNECT<span>.</span></h2>
+                <p class="signature-description">
+                    Exploring technology, solving problems, and turning ideas into practical solutions.
+                </p>
+                <p class="signature-email-intro">
+                    Email me at
+                    <a href="mailto:darrylstaban@gmail.com">darrylstaban@gmail.com</a>
+                    to get in touch.
+                </p>
+                <div class="signature-actions">
+                    <a class="connect-button" href="https://github.com/rrelll" target="_blank" rel="noopener noreferrer">
+                        <span class="connect-icon">⌘</span>
+                        <span>GitHub</span>
+                        <span class="connect-arrow">↗</span>
+                    </a>
+                    <a class="connect-button" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                        <span class="connect-icon linkedin-icon">in</span>
+                        <span>LinkedIn</span>
+                        <span class="connect-arrow">↗</span>
+                    </a>
+                    <a class="connect-button connect-button-back" href="#home">
+                        <span class="connect-icon">↑</span>
+                        <span>Back to Top</span>
+                    </a>
+                </div>
+            </div>
         </section>
-
     </main>
 
-    <!-- FOOTER -->
+    <div class="lightbox" id="photo-lightbox" aria-hidden="true">
+        <button class="lightbox-close" type="button" aria-label="Close image">&times;</button>
+        <img id="lightbox-image" src="" alt="Enlarged project screenshot">
+    </div>
+
     <footer class="site-footer container">
-
-        <a class="footer-logo" href="#home">
-            darryl<span>.</span>
-        </a>
-
+        <a class="footer-logo" href="#home">darryl<span>.</span></a>
         <p>Designed and built with curiosity.</p>
-
-        <p>
-            © <span id="current-year"></span> Darryl
-        </p>
-
+        <p>© <span id="current-year"></span> Darryl</p>
     </footer>
-
 </body>
 </html>
