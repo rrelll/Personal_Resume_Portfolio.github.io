@@ -1,4 +1,3 @@
-
 /* MOBILE NAVIGATION */
 
 const menuToggle = document.querySelector(".menu-toggle");
@@ -7,14 +6,6 @@ const navItems = document.querySelectorAll(".nav-link, .nav-cta");
 
 function isMobile() {
     return window.matchMedia("(max-width: 680px)").matches;
-}
-
-function updateMenuLayout() {
-    if (!menuToggle || !navLinks) return;
-
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Open menu");
-    navLinks.hidden = isMobile();
 }
 
 function closeMenu() {
@@ -26,32 +17,24 @@ function closeMenu() {
 }
 
 if (menuToggle && navLinks) {
-    updateMenuLayout();
+    closeMenu();
 
     menuToggle.addEventListener("click", () => {
-        const expanded =
-            menuToggle.getAttribute("aria-expanded") === "true";
+        const expanded = menuToggle.getAttribute("aria-expanded") === "true";
 
         menuToggle.setAttribute("aria-expanded", String(!expanded));
-        menuToggle.setAttribute(
-            "aria-label",
-            expanded ? "Open menu" : "Close menu"
-        );
-
+        menuToggle.setAttribute("aria-label", expanded ? "Open menu" : "Close menu");
         navLinks.hidden = expanded;
     });
 
-    navItems.forEach((link) => {
-        link.addEventListener("click", closeMenu);
-    });
-
-    window.addEventListener("resize", updateMenuLayout);
+    navItems.forEach(link => link.addEventListener("click", closeMenu));
+    window.addEventListener("resize", closeMenu);
 }
+
 
 /* ANIMATED INTERESTS */
 
 const roleText = document.getElementById("role-text");
-
 const roles = [
     "Computer Networking",
     "IT Systems & Support",
@@ -70,14 +53,14 @@ if (roleText && !reducedMotion) {
     let deleting = false;
 
     function animateRole() {
-        const currentRole = roles[roleIndex];
+        const role = roles[roleIndex];
 
         characterIndex += deleting ? -1 : 1;
-        roleText.textContent = currentRole.slice(0, characterIndex);
+        roleText.textContent = role.slice(0, characterIndex);
 
         let delay = deleting ? 35 : 65;
 
-        if (!deleting && characterIndex === currentRole.length) {
+        if (!deleting && characterIndex === role.length) {
             deleting = true;
             delay = 1500;
         } else if (deleting && characterIndex === 0) {
@@ -86,14 +69,15 @@ if (roleText && !reducedMotion) {
             delay = 350;
         }
 
-        window.setTimeout(animateRole, delay);
+        setTimeout(animateRole, delay);
     }
 
-    window.setTimeout(() => {
+    setTimeout(() => {
         deleting = true;
         animateRole();
     }, 1800);
 }
+
 
 /* PROFILE PHOTO FALLBACK */
 
@@ -106,10 +90,10 @@ function showPlaceholder() {
 }
 
 function showProfileImage() {
-    if (profileImage && photoPlaceholder) {
-        profileImage.hidden = false;
-        photoPlaceholder.hidden = true;
-    }
+    if (!profileImage || !photoPlaceholder) return;
+
+    profileImage.hidden = false;
+    photoPlaceholder.hidden = true;
 }
 
 if (profileImage && photoPlaceholder) {
@@ -117,13 +101,12 @@ if (profileImage && photoPlaceholder) {
     profileImage.addEventListener("error", showPlaceholder);
 
     if (profileImage.complete) {
-        if (profileImage.naturalWidth > 0) {
-            showProfileImage();
-        } else {
-            showPlaceholder();
-        }
+        profileImage.naturalWidth > 0
+            ? showProfileImage()
+            : showPlaceholder();
     }
 }
+
 
 /* SCROLL PROGRESS */
 
@@ -132,25 +115,17 @@ const progressBar = document.querySelector(".scroll-progress");
 function updateScrollProgress() {
     if (!progressBar) return;
 
-    const scrollableHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
+    const height = document.documentElement.scrollHeight - window.innerHeight;
 
-    if (scrollableHeight <= 0) {
-        progressBar.style.width = "0%";
-        return;
-    }
-
-    const progress = (window.scrollY / scrollableHeight) * 100;
-
-    progressBar.style.width = `${Math.min(progress, 100)}%`;
+    progressBar.style.width = height > 0
+        ? `${Math.min((window.scrollY / height) * 100, 100)}%`
+        : "0%";
 }
 
-window.addEventListener("scroll", updateScrollProgress, {
-    passive: true
-});
-
+window.addEventListener("scroll", updateScrollProgress, { passive: true });
 window.addEventListener("resize", updateScrollProgress);
 updateScrollProgress();
+
 
 /* ACTIVE NAVIGATION LINK */
 
@@ -158,30 +133,25 @@ const sections = document.querySelectorAll("main section[id]");
 const sectionLinks = document.querySelectorAll(".nav-link");
 
 if ("IntersectionObserver" in window) {
-    const sectionObserver = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (!entry.isIntersecting) return;
+    const sectionObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
 
-                sectionLinks.forEach((link) => {
-                    const active =
-                        link.getAttribute("href") ===
-                        `#${entry.target.id}`;
-
-                    link.classList.toggle("active", active);
-                });
+            sectionLinks.forEach(link => {
+                link.classList.toggle(
+                    "active",
+                    link.getAttribute("href") === `#${entry.target.id}`
+                );
             });
-        },
-        {
-            rootMargin: "-25% 0px -60% 0px",
-            threshold: 0
-        }
-    );
-
-    sections.forEach((section) => {
-        sectionObserver.observe(section);
+        });
+    }, {
+        rootMargin: "-25% 0px -60% 0px",
+        threshold: 0
     });
+
+    sections.forEach(section => sectionObserver.observe(section));
 }
+
 
 /* AUTOMATIC FOOTER YEAR */
 
@@ -189,4 +159,66 @@ const currentYear = document.getElementById("current-year");
 
 if (currentYear) {
     currentYear.textContent = new Date().getFullYear();
+}
+
+
+/* PHOTO LIGHTBOX */
+
+const clickablePhotos = document.querySelectorAll(".clickable-photo");
+const lightbox = document.getElementById("photo-lightbox");
+const lightboxImage = document.getElementById("lightbox-image");
+const lightboxClose = document.querySelector(".lightbox-close");
+
+function closeLightbox() {
+    if (!lightbox || !lightboxImage) return;
+
+    lightbox.classList.remove("active");
+    lightboxImage.src = "";
+    document.body.style.overflow = "";
+}
+
+if (lightbox && lightboxImage) {
+    clickablePhotos.forEach(photo => {
+        photo.addEventListener("click", () => {
+            lightboxImage.src = photo.src;
+            lightboxImage.alt = photo.alt;
+            lightbox.classList.add("active");
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+    lightboxClose?.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", event => {
+        if (event.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") closeLightbox();
+    });
+}
+
+
+/* PAGE LOAD ANIMATION */
+
+document.documentElement.classList.add("js-enabled");
+document.body.classList.add("page-loaded");
+
+
+/* CYBERPUNK BOOT INTRO */
+
+const bootScreen = document.getElementById("boot-screen");
+
+if (bootScreen) {
+    document.documentElement.classList.add("boot-active");
+
+    setTimeout(() => {
+        bootScreen.classList.add("boot-exit");
+
+        setTimeout(() => {
+            document.documentElement.classList.remove("boot-active");
+            bootScreen.classList.remove("boot-exit");
+        }, reducedMotion ? 0 : 350);
+
+    }, reducedMotion ? 100 : 1800);
 }
